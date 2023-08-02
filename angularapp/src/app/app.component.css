@@ -1,0 +1,9 @@
+.card {
+    max-width: 260px;
+    border: 1px solid black;
+  }
+  
+  .card-img-top {
+    max-width: 100px;
+  }
+  
