@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { formData, todayData } from './app.component';
+
 
 @Component({
   selector: 'app-root',
@@ -16,12 +18,12 @@ export class AppComponent {
   total: string = '';
   enteredSearch: string = '';
   searchText: string = '';
-  cards: formData[] = []; 
+  cards: formData[] = [];
   today: todayData[] = [];
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
   data(f: NgForm) {
     console.log(f.value);
     this.cards.push(f.value);
@@ -65,12 +67,12 @@ export class AppComponent {
   }
 }
 
-interface formData {
+export interface formData {
   name: string;
   calories: string;
   image: URL;
 }
-interface todayData {
+export interface todayData {
   name: string;
   calories: string;
   qty: string;
